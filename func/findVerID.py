@@ -35,7 +35,10 @@ def findID(inverID, injson):
         md_list.append(injson['modelVersions'][0]['id'])
         md_list.append(injson['modelVersions'][0]['name'])
         md_list.append(injson['modelVersions'][0]['baseModel'])
-        md_list.append(injson['modelVersions'][0]['description'])
+        try:
+            md_list.append(injson['modelVersions'][0]['description'])
+        except:
+            md_list.append('无')
         try:
             md_list.append(injson['modelVersions'][0]['trainedWords'])
         except:
