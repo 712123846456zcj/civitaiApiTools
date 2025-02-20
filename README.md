@@ -29,6 +29,8 @@ https://civitai.com/models/291275/xianyun-genshin-impact-or-goofy-ai?modelVersio
 
 2.粘贴到程序中，回车即可
 
+下载构建版本，双击一键运行：https://github.com/712123846456zcj/civitaiApiTools/releases/tag/1.3
+
 注：该脚本采样python3和标准库编写，利用civitai的官方API完成主要工作，下载到本地使用python解释器运行即可，无需第三方库，但cookie需要自行查找并且复制到main_func.py当中（好像也不需要），另外程序可能会因为网络等问题报错，尝试重新运行即可。
 
 3.如果需要批量下载返图区图床的图片，请使用CivitAI_Image_grabber文件夹内的脚本（此项目非本人开发），不过我调整了一些东西，按照文件夹内的教程和需求下载即可。
