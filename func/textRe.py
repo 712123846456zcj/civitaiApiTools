@@ -2,26 +2,76 @@ import re
 
 from html.parser import HTMLParser
 
+isReTXT = True
+
+# class TextExtractor(HTMLParser):
+#     def __init__(self):
+#         super().__init__()
+#         self.text = ""
+#
+#     def handle_data(self, data):
+#         data = re.sub(r'(<\/p>|<\/a>|<\/[^>]*>)', '', data)
+#         if "\n" in data:
+#             self.text += "\n" + data + "\n"
+#         else:
+#             self.text += data + "\n"
+#
+#     def get_extracted_text(self):
+#         return self.text.strip()
+#
+# def extract_text_from_html(html_content):
+#     if isReTXT:
+#         parser = TextExtractor()
+#         parser.feed(html_content)
+#         text = parser.get_extracted_text()
+#         return str(text)
+#     else:
+#         return html_content
+
 class TextExtractor(HTMLParser):
     def __init__(self):
         super().__init__()
         self.text = ""
+        self.is_link = False
+        self.current_link = ""
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            self.is_link = True
+            for attr in attrs:
+                if attr[0] == "href":
+                    self.current_link = attr[1]
+
+    def handle_endtag(self, tag):
+        if tag == "a":
+            if self.is_link and self.current_link:
+                self.text += f" ({self.current_link})"
+            self.is_link = False
+            self.current_link = ""
 
     def handle_data(self, data):
-        data = re.sub(r'(<\/p>|<\/a>|<\/[^>]*>)', '', data)
-        if "\n" in data:
-            self.text += "\n" + data + "\n"
+        if self.is_link:
+            # Append the link text
+            self.text += data
         else:
-            self.text += data + "\n"
+            # Handle regular text
+            data = re.sub(r'(<\/p>|<\/[^>]*>)', '', data)
+            if "\n" in data:
+                self.text += "\n" + data + "\n"
+            else:
+                self.text += data + "\n\n"
 
     def get_extracted_text(self):
         return self.text.strip()
 
-def extract_text_from_html(html_content):
-    parser = TextExtractor()
-    parser.feed(html_content)
-    text = parser.get_extracted_text()
-    return str(text)
+def extract_text_from_html(html_content, isReTXT=True):
+    if isReTXT:
+        parser = TextExtractor()
+        parser.feed(html_content)
+        text = parser.get_extracted_text()
+        return text
+    else:
+        return html_content
 
 
 
