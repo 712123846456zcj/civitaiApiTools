@@ -19,9 +19,19 @@ def urlINFO(uurrll=''):
     else:
         s = uurrll.rstrip().split('?')
         org = uurrll.rstrip().split('/')
+
         s2 = s[1].replace('modelVersionId=','')
-        idlist.append(org[3])
-        idlist.append(s2)
+
+
+        if '?' in org[3]:
+            idlist.append(org[3].split('?')[0])
+            idlist.append(s2)
+            # print(org[3].split('?')[0])
+        else:
+            idlist.append(org[3])
+            idlist.append(s2)
+
+
 
 
     return idlist
