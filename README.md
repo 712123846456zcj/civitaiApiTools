@@ -36,6 +36,7 @@ https://civitai.com/models/291275/xianyun-genshin-impact-or-goofy-ai?modelVersio
 4.有空闲时间会完善此工具
 
 ### 项目参考链接：
-#### https://github.com/Confuzu/CivitAI_Image_grabber/tree/main
 #### https://developer.civitai.com/docs/api/public-rest
+#### https://github.com/Confuzu/CivitAI_Image_grabber/tree/main
+#### https://github.com/Confuzu/CivitAI-Model-grabber
 #### https://blog.csdn.net/qq_35977139/article/details/132741398
