@@ -7,8 +7,8 @@
 #### 作者例图一键下载到当前文件夹
 ##### 关于模型下载建议手动下载，该项目仅是搜图的懒人必备工具
 ![](https://i.postimg.cc/mr3z9p9Z/62c6542b6f3dbeb00589fd53344ad95b.png)
-[20250221-093559.png](https://postimg.cc/PpsbM3P8)
-[](https://i.postimg.cc/7hJq3bR1/20250219-201759.png)![](https://i.postimg.cc/7hJq3bR1/20250219-201759.png)
+![](https://i.postimg.cc/pTy0R3vk/20250221-093559.png)
+![](https://i.postimg.cc/7hJq3bR1/20250219-201759.png)
 
 #### 2025.2.21更新：全面调整参数，新增模型一键下载功能（但要自己准备api key），修复了其他bug
 #### 2025.2.21更新：修复了一些bug，新增模型和返图区下载功能（计划，未实现）
