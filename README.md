@@ -1,9 +1,12 @@
 # C站模型信息和图片下载脚本，一键解放双手v1.4 beta
 # Civitai model information and image download script, free your hands with one click
 
+
 ## 项目介绍
+
+#### 是否厌倦了手动复制提示词，一张一张图片下载的烦恼，或者模型收集太慢，资源获取太慢，难以整理？
 #### C站模型信息和图片下载脚本，一键解放双手（一步到位获取模型，模型信息，图片），非爬虫工具，仅为api调用，方便本地管理资源
-### civitaiApiTools 一键解放双手 v1.4-beta
+
 ### Civitai模型图片，信息，一键模型API交互脚本，一键获取内容到本地。
 
 ##### 关于模型下载建议手动下载，该项目仅是搜图的懒人必备工具
