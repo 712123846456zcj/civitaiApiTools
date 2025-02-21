@@ -4,8 +4,8 @@
 
 ## 项目介绍
 
-#### 是否厌倦了手动复制提示词，一张一张图片下载的烦恼，或者模型收集太慢，资源获取太慢，难以整理？
-#### C站模型信息和图片下载脚本，一键解放双手（一步到位获取模型，模型信息，图片），非爬虫工具，仅为api调用，方便本地管理资源
+#### 是否厌倦了手动复制提示词，一张一张图片下载的烦恼，或者模型收集太慢，资源获取太慢，难以整理？ 试试此工具一步到位吧！
+#### 非爬虫工具，仅为api调用，方便本地管理资源
 
 ### Civitai模型图片，信息，一键模型API交互脚本，一键获取内容到本地。
 
@@ -25,9 +25,13 @@
 1.下载构建的发行版开箱即用，输入你需要的任意civitai模型链接（公开的），复制到程序一键运行即可
 （你复制的链接样式应该如下：
 https://civitai.com/models/469314
+
 https://civitai.com/models/469314?modelVersionId=522182
+
 https://civitai.com/models/6424/chilloutmix
+
 https://civitai.com/models/291275/xianyun-genshin-impact-or-goofy-ai?modelVersionId=393719
+
 
 ）
 
@@ -56,3 +60,4 @@ https://civitai.com/models/291275/xianyun-genshin-impact-or-goofy-ai?modelVersio
 #### https://github.com/Confuzu/CivitAI_Image_grabber/tree/main
 #### https://github.com/Confuzu/CivitAI-Model-grabber
 #### https://blog.csdn.net/qq_35977139/article/details/132741398
+#### https://github.com/ashleykleynhans/civitai-downloader
