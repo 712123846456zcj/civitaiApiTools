@@ -16,25 +16,26 @@
 #### 2025.2.20更新：调整了一些代码，并且优化了对简介的处理，提高简介可读性，重要！：修复了对链接标签的提取
 
 ## 使用方法
-1.打开浏览器。进入c站，找到你想要的模型，选择模型版本，在地址栏中复制该链接。
+1.下载构建的发行版开箱即用，输入你需要的任意civitai模型链接（公开的），复制到程序一键运行即可
 （你复制的链接样式应该如下：
 https://civitai.com/models/469314
-
 https://civitai.com/models/469314?modelVersionId=522182
-
 https://civitai.com/models/6424/chilloutmix
-
 https://civitai.com/models/291275/xianyun-genshin-impact-or-goofy-ai?modelVersionId=393719
 
 ）
 
-2.粘贴到程序中，回车即可
-
 下载构建版本，双击一键运行：https://github.com/712123846456zcj/civitaiApiTools/releases/tag/1.3
+注：构建版本会从链接读取后依次进行作者图片下载，简介信息获取，模型下载步骤，目前没有额外设置。
+如果不需要下载模型，建议使用源码版本，因为其可以进行更多修改和配置
+
+2.源码部署
 
 注：该程序采用python3编写，程序可能会因为网络等问题报错，尝试重新运行即可。
 
+
 对于下载模型，请使用任意文本编辑器打开func\downloadModel\downloadApiMod.py，编辑第五行代码token = "" ，在括号里面添加你的key，否则请不要填写任何内容。
+（构建版本中我以及打包好了，程序内部拥有我分享的key，可以一键运行，如果你使用源码运行那么建议使用自己的key）
 
 如何获取你个人的key：https://education.civitai.com/civitais-guide-to-downloading-via-api/
 
