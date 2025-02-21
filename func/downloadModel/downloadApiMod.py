@@ -1,9 +1,9 @@
 import requests
 from tqdm import tqdm
 
-# api key
-token = "1d4c8c50906cadee87458516425a3248"
-# token = "kfc50905090kfckfc509050905090kfc"
+# api key ------ example:"kfc50905090kfckfc509050905090kfc"
+token = ""
+# 官方：创作者可以要求人们登录后才能下载他们的资源。这是我们提供的选项，但不是我们的要求——这完全取决于资源所有者。
 
 def wellDone(outpath, model_any_id,model_name):
     """
@@ -26,17 +26,21 @@ def wellDone(outpath, model_any_id,model_name):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
         "Content-Type":"application/json",
     }
-
-    def download_with_progress(url, headers=None, **kwargs):
-        response = requests.get(url, headers=headers, verify=False, stream=True, **kwargs)
-        total_size = int(response.headers.get('content-length', 0))
-
-        with tqdm(total=total_size, unit='iB', unit_scale=True, desc=f'\nDownloading --{model_name}') as pbar:
-            for chunk in response.iter_content(chunk_size=8192):
-                pbar.update(len(chunk))
-                yield chunk
-
-    # Download the model using tqdm
-    with open(f'{outpath}/{model_name}.safetensor', 'wb') as f:
-        for chunk in download_with_progress(in_url, headers=headerList):
-            f.write(chunk)
+    
+    if token:
+        def download_with_progress(url, headers=None, **kwargs):
+            response = requests.get(url, headers=headers, verify=False, stream=True, **kwargs)
+            total_size = int(response.headers.get('content-length', 0))
+    
+            with tqdm(total=total_size, unit='iB', unit_scale=True, desc=f'\nDownloading --{model_name}') as pbar:
+                for chunk in response.iter_content(chunk_size=8192):
+                    pbar.update(len(chunk))
+                    yield chunk
+    
+        # Download the model using tqdm
+        with open(f'{outpath}/{model_name}.safetensor', 'wb') as f:
+            for chunk in download_with_progress(in_url, headers=headerList):
+                f.write(chunk)
+    else:
+        print('[-]empty token....over')
+        pass
