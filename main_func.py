@@ -13,10 +13,6 @@ from func.urlTools import urlINFO
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# 655996/733923 已经更新，目前在考虑手动输入两个id还是仅仅一个链接搞定
-# input_your_modelID = input("请输入链接的原始模型id：")
-# input_your_modelVersionID = input("请输入链接的版本模型id：")
-
 input_your_modeURL = input("请输入模型的url：")
 input_your_modelID = urlINFO(input_your_modeURL)[0]
 input_your_modelVersionID = urlINFO(input_your_modeURL)[1]
