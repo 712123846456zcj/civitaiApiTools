@@ -4,7 +4,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 import time
 
 # api key ------ example:"kfc50905090kfckfc509050905090kfc"
-token = "1d4c8c50906cadee87458516425a3248"
+token = ""
 # 官方：创作者可以要求人们登录后才能下载他们的资源。这是我们提供的选项，但不是我们的要求——这完全取决于资源所有者。
 
 def wellDone(outpath, model_any_id, model_name):
