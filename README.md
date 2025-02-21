@@ -1,4 +1,4 @@
-# C站模型信息和图片下载脚本，一键解放双手v1.4 beta
+# C站模型信息和图片下载脚本，一键解放双手v1.5 beta
 # Civitai model information and image download script, free your hands with one click
 
 
@@ -14,6 +14,7 @@
 ![](https://i.postimg.cc/pTy0R3vk/20250221-093559.png)
 ![](https://i.postimg.cc/7hJq3bR1/20250219-201759.png)
 
+#### 2025.2.21重要更新：修复模型下载策略，调整了一些代码
 #### 2025.2.21更新：全面调整参数，新增模型一键下载功能（但要自己准备api key），修复了其他bug
 #### 2025.2.21更新：修复了一些bug，新增模型和返图区下载功能（此项目未实现，但可通过附属工具一键获取图床图片）
 #### 2025.2.20待更新：添加返图区图床的图片下载，更为方便
